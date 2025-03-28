@@ -1,3 +1,4 @@
+const todaysDate = document.getElementById("todays-date");
 const taskCompleted = document.getElementById("task-completed");
 const taskAssigned = document.getElementById("task-assigned");
 const taskCompletedCount = taskCompleted.querySelector("h4");
@@ -18,9 +19,7 @@ document
     document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.1)`;
     taskCompleted.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.1)`;
     taskAssigned.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.1)`;
-    document.getElementById(
-      "todays-date"
-    ).style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.1)`;
+    todaysDate.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.1)`;
 
     for (const task of tasks) {
       task.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.1)`;
@@ -34,7 +33,6 @@ document
 document
   .getElementById("discover-something")
   .addEventListener("click", function (event) {
-    event.preventDefault();
     window.location.href = "./blogs.html";
   });
 
@@ -43,6 +41,8 @@ for (const button of buttons) {
     event.preventDefault();
     const date = new Date();
     const timeString = date.toLocaleTimeString("en-US", { hour12: true });
+    const taskName =
+      button.parentElement.parentElement.querySelector("h3").innerText;
     const p = document.createElement("p");
     p.classList.add(
       "bg-secondary",
@@ -62,10 +62,9 @@ for (const button of buttons) {
     p.style.backgroundColor = document.body.style.backgroundColor;
     p.innerHTML =
       "You have completed the task " +
-      `'${button.parentElement.parentElement.querySelector("h3").innerText}'` +
+      `'${taskName}'` +
       " at " +
       `${timeString}.`;
-
     button.innerHTML = "Completed";
     button.disabled = true;
     taskAssignedCount.innerText =
@@ -73,7 +72,7 @@ for (const button of buttons) {
     taskCompletedCount.innerText =
       "0" + (Number(taskCompletedCount.innerText) + 1);
     activityLog.appendChild(p);
-    alert("Task has been completed successfully.");
+    alert(`The task '${taskName}' has been completed successfully.`);
 
     if (taskAssignedCount.innerText === "00") {
       alert("Congratulations!!! You have completed all the current tasks.");

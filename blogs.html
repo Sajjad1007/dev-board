@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs</title>
-  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <title>Blogs - DevBoard</title>
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +18,12 @@
       theme: {
         extend: {
           fontFamily: {
-            poppins: ["Poppins", "sans-serif"],
+            "poppins": ["Poppins", "sans-serif"]
           },
           colors: {
-            primary: "#3752fd",
-            secondary: "#f4f7ff",
-            dark: "#00303c",
+            "primary": "#3752fd",
+            "secondary": "#f4f7ff",
+            "dark": "#00303c"
           }
         }
       }
@@ -35,15 +35,15 @@
   <div class="py-4 px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20 container mx-auto">
     <header class="bg-white rounded-xl py-1 px-4">
       <nav class="navbar p-0 flex justify-between">
-        <div>
-          <a class="btn btn-ghost text-2xl p-0"><img src="./images/logo.png" loading="lazy" alt="Logo" class="w-10">
+        <div onclick="window.location.href='./blogs.html'">
+          <a class="btn btn-ghost text-2xl p-0"><img src="./assets/logo.png" loading="lazy" alt="Logo" class="w-10">
             <div class="hidden sm:block">
               <span class="font-light">Dev</span><span class="font-bold">Board</span>
             </div>
           </a>
         </div>
         <button id="desk-btn"
-          class="btn hover:opacity-70 complete-btn hover:bg-primary border-none bg-primary text-white font-normal h-10 min-h-9 px-4">Back
+          class="btn hover:opacity-80 complete-btn hover:bg-primary border-none bg-primary text-white font-normal h-10 min-h-9 px-4">Back
           To Desk</button>
       </nav>
     </header>
@@ -57,7 +57,7 @@
             an
             element in the DOM?</h4>
           <p class="px-4 pt-3 text-sm text-black opacity-60">Here are the common ways to select elements in the DOM:</p>
-          <ul class="list-disc ml-9 mt-2 text-sm text-black opacity-60 pr-4">
+          <ul class="list-none ml-8 mt-2 text-sm text-black opacity-60 pr-4">
             <li><code class="bg-gray-200 px-1 rounded-md">document.getElementById();</code></li>
             <li><code class="bg-gray-200 px-1 rounded-md">document.getElementsByClassName();</code></li>
             <li><code class="bg-gray-200 px-1 rounded-md">document.getElementsByTagName();</code></li>
@@ -73,15 +73,15 @@
             innerHTML, innerText and textContent?</h4>
           <p class="px-4 pt-3 text-sm text-black opacity-60">
             Here's a concise breakdown of the differences between innerHTML, innerText and textContent:</p>
-          <ul class="list-disc ml-9 text-sm text-black opacity-60 pr-4">
+          <ul class="list-none ml-8 text-sm text-black opacity-60 pr-4">
             <li class="mt-2">innerHTML:
-              <ol class="list-decimal ml-5 mt-1 text-sm text-black">
+              <ol class="list-disc ml-7 mt-1 text-sm text-black">
                 <li>Retrieves or sets the HTML content of an element, including tags.</li>
                 <li>Parses and renders HTML, which can include child elements.</li>
               </ol>
             </li>
             <li class="mt-2">innerText:
-              <ol class="list-decimal ml-5 mt-1 text-sm text-black">
+              <ol class="list-disc ml-7 mt-1 text-sm text-black">
                 <li>Retrieves or sets the visible text of an element, excluding hidden elements (e.g., those styled
                   with&nbsp;<code class="bg-gray-200 px-1 rounded-md">display: none</code>&nbsp;or&nbsp;<code
                     class="bg-gray-200 px-1 rounded-md">visibility: hidden</code>).
@@ -91,7 +91,7 @@
               </ol>
             </li>
             <li class="mt-2">textContent:
-              <ol class="list-decimal ml-5 mt-1 text-sm text-black">
+              <ol class="list-disc ml-7 mt-1 text-sm text-black">
                 <li>Retrieves or sets the raw text content of an element, including hidden elements.</li>
                 <li>Does not parse HTML or consider CSS styles.</li>
               </ol>
@@ -119,22 +119,22 @@
           <p class="px-4 pt-3 text-sm text-black opacity-60">Here are some the common ways to create, add and remove
             elements
             using Javascript:</p>
-          <ul class="list-disc ml-9 text-sm text-black opacity-60 pr-4">
+          <ul class="list-none ml-8 text-sm text-black opacity-60 pr-4">
             <li class="mt-2">To create an element:
-              <ol class="list-decimal ml-5 mt-1 text-sm text-black">
-                <li><code class="bg-gray-200 px-1 rounded-md">document.createElement('div');</code></li>
+              <ol class="list-none ml-3 mt-1 text-sm text-black">
+                <li>- <code class="bg-gray-200 px-1 rounded-md">document.createElement('div');</code></li>
               </ol>
             </li>
             <li class="mt-2">To add an element:
-              <ol class="list-decimal ml-5 mt-1 text-sm text-black">
-                <li><code class="bg-gray-200 px-1 rounded-md">parent.appendChild(child);</code></li>
-                <li><code class="bg-gray-200 px-1 rounded-md">parent.append(child, 'text');</code></li>
+              <ol class="list-none ml-3 mt-1 text-sm text-black">
+                <li>- <code class="bg-gray-200 px-1 rounded-md">parent.appendChild(child);</code></li>
+                <li>- <code class="bg-gray-200 px-1 rounded-md">parent.append(child, 'text');</code></li>
               </ol>
             </li>
             <li class="mt-2">To remove an element:
-              <ol class="list-decimal ml-5 mt-1 text-sm text-black">
-                <li><code class="bg-gray-200 px-1 rounded-md">parent.removeChild(child);</code></li>
-                <li><code class="bg-gray-200 px-1 rounded-md">element.remove();</code></li>
+              <ol class="list-none ml-3 mt-1 text-sm text-black">
+                <li>- <code class="bg-gray-200 px-1 rounded-md">parent.removeChild(child);</code></li>
+                <li>- <code class="bg-gray-200 px-1 rounded-md">element.remove();</code></li>
               </ol>
             </li>
           </ul>
