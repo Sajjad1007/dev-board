@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs - DevBoard</title>
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            "poppins": ["Poppins", "sans-serif"]
+          },
+          colors: {
+            "primary": "#3752fd",
+            "secondary": "#f4f7ff",
+            "dark": "#00303c"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-poppins bg-secondary text-dark min-h-screen">
+  <div class="py-4 px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-20 container mx-auto">
+    <header class="bg-white rounded-xl py-1 px-4">
+      <nav class="navbar p-0 flex justify-between">
+        <div onclick="window.location.href='./blogs.html'">
+          <a class="btn btn-ghost text-2xl p-0"><img src="./assets/logo.png" loading="lazy" alt="Logo" class="w-10">
+            <div class="hidden sm:block">
+              <span class="font-light">Dev</span><span class="font-bold">Board</span>
+            </div>
+          </a>
+        </div>
+        <button id="desk-btn"
+          class="btn hover:opacity-80 complete-btn hover:bg-primary border-none bg-primary text-white font-normal h-10 min-h-9 px-4">Back
+          To Desk</button>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2 class="text-center text-2xl font-bold mt-6 mb-4">Blogs</h2>
+        <div class="bg-white py-4 rounded-xl my-4">
+          <h4 class="text-lg font-semibold border-b border-dashed px-4 pb-3">Question-1: What are the different ways to
+            select
+            an
+            element in the DOM?</h4>
+          <p class="px-4 pt-3 text-sm text-black opacity-60">Here are the common ways to select elements in the DOM:</p>
+          <ul class="list-none ml-4 sm:ml-8 mt-2 text-sm text-black opacity-60 pr-4">
+            <li><code class="bg-gray-200 px-1 rounded-md">document.getElementById();</code></li>
+            <li><code class="bg-gray-200 px-1 rounded-md">document.getElementsByClassName();</code></li>
+            <li><code class="bg-gray-200 px-1 rounded-md">document.getElementsByTagName();</code></li>
+            <li><code class="bg-gray-200 px-1 rounded-md">document.querySelector();</code></li>
+            <li><code class="bg-gray-200 px-1 rounded-md">document.querySelectorAll();</code></li>
+          </ul>
+          <p class="px-4 mt-2 text-sm text-black opacity-60">Each method has its use case depending on the structure of
+            DOM and the specificity of the element we want
+            to target.</p>
+        </div>
+        <div class="bg-white py-4 rounded-xl my-4">
+          <h4 class="text-lg font-semibold border-b border-dashed px-4 pb-3">Question-2: What is the difference between
+            innerHTML, innerText and textContent?</h4>
+          <p class="px-4 pt-3 text-sm text-black opacity-60">
+            Here's a concise breakdown of the differences between innerHTML, innerText and textContent:</p>
+          <ul class="list-none ml-4 sm:ml-8 text-sm text-black opacity-60 pr-4">
+            <li class="mt-2">innerHTML:
+              <ol class="list-disc ml-7 mt-1 text-sm text-black">
+                <li>Retrieves or sets the HTML content of an element, including tags.</li>
+                <li>Parses and renders HTML, which can include child elements.</li>
+              </ol>
+            </li>
+            <li class="mt-2">innerText:
+              <ol class="list-disc ml-7 mt-1 text-sm text-black">
+                <li>Retrieves or sets the visible text of an element, excluding hidden elements (e.g., those styled
+                  with&nbsp;<code class="bg-gray-200 px-1 rounded-md">display: none</code>&nbsp;or&nbsp;<code
+                    class="bg-gray-200 px-1 rounded-md">visibility: hidden</code>).
+                </li>
+                <li>Takes into account CSS styles like&nbsp;<code
+                    class="bg-gray-200 px-1 rounded-md">text-transform</code>&nbsp;.</li>
+              </ol>
+            </li>
+            <li class="mt-2">textContent:
+              <ol class="list-disc ml-7 mt-1 text-sm text-black">
+                <li>Retrieves or sets the raw text content of an element, including hidden elements.</li>
+                <li>Does not parse HTML or consider CSS styles.</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white py-4 rounded-xl my-4">
+          <h4 class="text-lg font-semibold border-b border-dashed px-4 pb-3">Question-3: What is event delegation in the
+            DOM?</h4>
+          <p class="px-4 pt-3 text-sm text-black opacity-60">Event delegation is a technique in the DOM where a single
+            event listener is attached to a parent element to handle events on its child elements. Instead of adding
+            event listeners to multiple child elements, the parent element listens for events and determines which child
+            triggered the event using event bubbling.</p>
+        </div>
+        <div class="bg-white py-4 rounded-xl my-4">
+          <h4 class="text-lg font-semibold border-b border-dashed px-4 pb-3">Question-4: What is event bubbling in the
+            DOM?</h4>
+          <p class="px-4 pt-3 text-sm text-black opacity-60">Event bubbling is a mechanism in the DOM where an event
+            triggered on a child element propagates (or bubbles up) through its ancestors, starting from the target
+            element and moving up to the root of the DOM tree.</p>
+        </div>
+        <div class="bg-white py-4 rounded-xl mt-4">
+          <h4 class="text-lg font-semibold border-b border-dashed px-4 pb-3">Question-5: How do you create, add and
+            remove elements using JavaScript?</h4>
+          <p class="px-4 pt-3 text-sm text-black opacity-60">Here are some the common ways to create, add and remove
+            elements
+            using Javascript:</p>
+          <ul class="list-none ml-4 sm:ml-8 text-sm text-black opacity-60 pr-4">
+            <li class="mt-2">To create an element:
+              <ol class="list-none ml-3 mt-1 text-sm text-black">
+                <li>- <code class="bg-gray-200 px-1 rounded-md">document.createElement('div');</code></li>
+              </ol>
+            </li>
+            <li class="mt-2">To add an element:
+              <ol class="list-none ml-3 mt-1 text-sm text-black">
+                <li>- <code class="bg-gray-200 px-1 rounded-md">parent.appendChild(child);</code></li>
+                <li>- <code class="bg-gray-200 px-1 rounded-md">parent.append(child, 'text');</code></li>
+              </ol>
+            </li>
+            <li class="mt-2">To remove an element:
+              <ol class="list-none ml-3 mt-1 text-sm text-black">
+                <li>- <code class="bg-gray-200 px-1 rounded-md">parent.removeChild(child);</code></li>
+                <li>- <code class="bg-gray-200 px-1 rounded-md">element.remove();</code></li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./scripts/blogs.js"></script>
+</body>
+
+</html>
