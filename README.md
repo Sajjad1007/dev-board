@@ -4,7 +4,7 @@
 
 Welcome to **Dev Board**, a modern and fully responsive website designed to track various development-related tasks for different companies. The project aims to provide an engaging and seamless user experience, ensuring a visually appealing layout with easy accessibility on mobile, tablet and desktop devices.
 
-### [Click here](https://dev-board-sajjadur-rahman.netlify.app/) to visit the website.
+### [Click here](https://dev-board-by-sajjadur-rahman.netlify.app/) to visit the website.
 
 ## Technologies Used
 
